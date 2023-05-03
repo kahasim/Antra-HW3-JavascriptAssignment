@@ -364,18 +364,7 @@ console.log(getSubsets(arr,2))
 // 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string. 
 // Sample arguments: 'microsoft.com', 'o' 
 // Expected output: 3 
-let string2 = "microsoft.com"
-function letteroccureneces(string,letter){
-  let occurences;
-  
-  for(let i = 0; i < string.length; i++){
-    if(string[i] == letter)
-      occurences++
-  }
-  return occurences
-}
 console.log("\nProblem #22\n")
-console.log(letteroccurences(string2,"o"))
 
 // 23. Write a JavaScript function to find the first not repeated character. 
 // Sample arguments: 'abacddbec' 
@@ -398,8 +387,9 @@ function Nonrepeating(string){
         if(charactercount[char] == 1)
         return char
       }
+      return null
   }
-return null
+
 console.log("\nProblem #23\n")
 console.log(Nonrepeating(string))
 
@@ -541,7 +531,7 @@ console.log(functionparamenter(addition))
 // 29. Write a JavaScript function to get the function name. 
 console.log("\nProblem #29\n" + getFunctionName(myFunction))
 function getFunctionName(){
-  return getFunctionName.caller.name
+  return getFunctionName.caller
 }
 
 function myFunction() {
